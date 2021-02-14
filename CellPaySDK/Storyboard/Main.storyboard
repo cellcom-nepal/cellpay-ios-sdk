@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="p5N-bX-hBP">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NZo-t2-ZwJ" customClass="LoginViewController" customModule="CellPaySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hoB-av-mUd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqp-3f-rOM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="268.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Jb5-xv-upS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="268.5"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cellpay_logo" translatesAutoresizingMaskIntoConstraints="NO" id="3oi-yZ-vtS">
+                                        <rect key="frame" x="87.5" y="92" width="200" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Cbq-kH-dCI"/>
+                                            <constraint firstAttribute="height" constant="85" id="jN3-LW-qWH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="3oi-yZ-vtS" firstAttribute="centerY" secondItem="Pqp-3f-rOM" secondAttribute="centerY" id="7al-Li-99X"/>
+                                    <constraint firstItem="3oi-yZ-vtS" firstAttribute="centerX" secondItem="Pqp-3f-rOM" secondAttribute="centerX" id="DTp-jm-rcL"/>
+                                    <constraint firstItem="Jb5-xv-upS" firstAttribute="leading" secondItem="Pqp-3f-rOM" secondAttribute="leading" id="Jlf-A8-qfT"/>
+                                    <constraint firstItem="Jb5-xv-upS" firstAttribute="top" secondItem="Pqp-3f-rOM" secondAttribute="top" id="gtm-6E-DK8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jb5-xv-upS" secondAttribute="trailing" id="vIa-pN-sJx"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jb5-xv-upS" secondAttribute="bottom" id="ykU-0d-ld2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-FM-qA0">
+                                <rect key="frame" x="0.0" y="278.5" width="375" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6V-KF-8W9" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WU9-vw-KFd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Mobile Number"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Enter Mobile Number"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="04v-NL-5h0" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="60" width="335" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ozv-5p-nzU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter 6 Digit Pin"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Enter 6 Digit Pin"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="04v-NL-5h0" firstAttribute="leading" secondItem="2Cb-FM-qA0" secondAttribute="leading" constant="20" id="1DD-R3-H92"/>
+                                    <constraint firstItem="04v-NL-5h0" firstAttribute="top" secondItem="q6V-KF-8W9" secondAttribute="bottom" constant="10" id="2iN-ay-ldw"/>
+                                    <constraint firstItem="q6V-KF-8W9" firstAttribute="leading" secondItem="2Cb-FM-qA0" secondAttribute="leading" constant="20" id="3X6-3d-SOj"/>
+                                    <constraint firstAttribute="trailing" secondItem="04v-NL-5h0" secondAttribute="trailing" constant="20" id="Sgi-Qz-3c0"/>
+                                    <constraint firstItem="q6V-KF-8W9" firstAttribute="top" secondItem="2Cb-FM-qA0" secondAttribute="top" id="WM9-te-o47"/>
+                                    <constraint firstAttribute="height" constant="110" id="cPX-Xf-KxM"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6V-KF-8W9" secondAttribute="trailing" constant="20" id="pfg-Tu-lcB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78d-vn-s9h" customClass="TKTransitionSubmitButton" customModule="CellPaySDK" customModuleProvider="target">
+                                <rect key="frame" x="40" y="433.5" width="295" height="45"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Bm0-7h-SL5"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="NZo-t2-ZwJ" eventType="touchUpInside" id="Zue-QT-EZe"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JF9-JN-Fp9">
+                                <rect key="frame" x="0.0" y="488.5" width="375" height="178.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lowe_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Pmh-DR-s4S">
+                                        <rect key="frame" x="0.0" y="83.5" width="375" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="GIB-rw-tOo"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pmh-DR-s4S" secondAttribute="trailing" id="A78-ej-MuT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pmh-DR-s4S" secondAttribute="bottom" id="HVg-tZ-I1j"/>
+                                    <constraint firstItem="Pmh-DR-s4S" firstAttribute="leading" secondItem="JF9-JN-Fp9" secondAttribute="leading" id="l5N-1i-N0D"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Cb-FM-qA0" firstAttribute="top" secondItem="Pqp-3f-rOM" secondAttribute="bottom" constant="10" id="0vr-9l-TVc"/>
+                            <constraint firstItem="78d-vn-s9h" firstAttribute="leading" secondItem="SMm-Wh-vH6" secondAttribute="leading" constant="40" id="23w-st-Zyk"/>
+                            <constraint firstItem="Pqp-3f-rOM" firstAttribute="leading" secondItem="SMm-Wh-vH6" secondAttribute="leading" id="4oz-Ok-Ob1"/>
+                            <constraint firstItem="JF9-JN-Fp9" firstAttribute="leading" secondItem="SMm-Wh-vH6" secondAttribute="leading" id="5V3-cD-TLa"/>
+                            <constraint firstItem="JF9-JN-Fp9" firstAttribute="top" secondItem="78d-vn-s9h" secondAttribute="bottom" constant="10" id="C3q-1h-ZZs"/>
+                            <constraint firstItem="2Cb-FM-qA0" firstAttribute="leading" secondItem="hoB-av-mUd" secondAttribute="leading" id="NVX-tZ-GRK"/>
+                            <constraint firstItem="78d-vn-s9h" firstAttribute="top" secondItem="2Cb-FM-qA0" secondAttribute="bottom" constant="45" id="Ryo-Qi-J5B"/>
+                            <constraint firstItem="SMm-Wh-vH6" firstAttribute="trailing" secondItem="78d-vn-s9h" secondAttribute="trailing" constant="40" id="TFz-wa-wUM"/>
+                            <constraint firstItem="2Cb-FM-qA0" firstAttribute="centerX" secondItem="hoB-av-mUd" secondAttribute="centerX" id="diP-fj-Ise"/>
+                            <constraint firstItem="SMm-Wh-vH6" firstAttribute="bottom" secondItem="JF9-JN-Fp9" secondAttribute="bottom" id="dk3-OQ-lNR"/>
+                            <constraint firstItem="SMm-Wh-vH6" firstAttribute="trailing" secondItem="Pqp-3f-rOM" secondAttribute="trailing" id="eGk-Lw-hFw"/>
+                            <constraint firstAttribute="trailing" secondItem="2Cb-FM-qA0" secondAttribute="trailing" id="mLH-1H-4BU"/>
+                            <constraint firstItem="Pqp-3f-rOM" firstAttribute="top" secondItem="SMm-Wh-vH6" secondAttribute="top" id="pOj-Vi-lQS"/>
+                            <constraint firstItem="2Cb-FM-qA0" firstAttribute="centerY" secondItem="hoB-av-mUd" secondAttribute="centerY" id="yQb-bN-DKg"/>
+                            <constraint firstItem="SMm-Wh-vH6" firstAttribute="trailing" secondItem="JF9-JN-Fp9" secondAttribute="trailing" id="zOe-Ou-U4c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SMm-Wh-vH6"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="78d-vn-s9h" id="dIy-P0-a84"/>
+                        <outlet property="mobileNumberTF" destination="q6V-KF-8W9" id="DNx-cZ-ofY"/>
+                        <outlet property="pinNumberTF" destination="04v-NL-5h0" id="Y4v-6B-M38"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEY-Ts-XDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="25.637181409295355"/>
+        </scene>
+        <!--Merchant Transaction DetailVC-->
+        <scene sceneID="GJs-Xs-XQE">
+            <objects>
+                <viewController storyboardIdentifier="MerchantTransactionDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4JC-cO-U3x" customClass="MerchantTransactionDetailVC" customModule="CellPaySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YNB-EO-Uqr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNY-q7-HVX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_transparent_bg" translatesAutoresizingMaskIntoConstraints="NO" id="h62-hq-FaX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aif-Gw-jWv">
+                                        <rect key="frame" x="10" y="12.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="4H6-NW-Ceh"/>
+                                            <constraint firstAttribute="height" constant="25" id="Qgi-F6-7v3"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_left_arrow"/>
+                                        <connections>
+                                            <action selector="bacButtonClicked:" destination="4JC-cO-U3x" eventType="touchUpInside" id="UfU-AO-jIE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merchant Transaction Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGn-0W-NMZ">
+                                        <rect key="frame" x="45" y="2" width="320" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Jn-LR-MFc"/>
+                                    <constraint firstItem="SGn-0W-NMZ" firstAttribute="centerY" secondItem="aNY-q7-HVX" secondAttribute="centerY" id="85D-H0-aug"/>
+                                    <constraint firstItem="aif-Gw-jWv" firstAttribute="centerY" secondItem="aNY-q7-HVX" secondAttribute="centerY" id="C7N-D7-SrK"/>
+                                    <constraint firstItem="aif-Gw-jWv" firstAttribute="leading" secondItem="aNY-q7-HVX" secondAttribute="leading" constant="10" id="Fwh-3r-d5J"/>
+                                    <constraint firstAttribute="bottom" secondItem="h62-hq-FaX" secondAttribute="bottom" id="Heo-qw-lzR"/>
+                                    <constraint firstAttribute="bottom" secondItem="SGn-0W-NMZ" secondAttribute="bottom" constant="2" id="Osg-5S-k89"/>
+                                    <constraint firstItem="h62-hq-FaX" firstAttribute="top" secondItem="aNY-q7-HVX" secondAttribute="top" id="Rcr-RW-rOl"/>
+                                    <constraint firstAttribute="trailing" secondItem="SGn-0W-NMZ" secondAttribute="trailing" constant="10" id="ULk-Pb-U4t"/>
+                                    <constraint firstItem="SGn-0W-NMZ" firstAttribute="leading" secondItem="aif-Gw-jWv" secondAttribute="trailing" constant="10" id="fsE-U9-dfH"/>
+                                    <constraint firstAttribute="trailing" secondItem="h62-hq-FaX" secondAttribute="trailing" id="srz-sL-h3C"/>
+                                    <constraint firstItem="SGn-0W-NMZ" firstAttribute="top" secondItem="aNY-q7-HVX" secondAttribute="top" constant="2" id="x6o-aC-NBU"/>
+                                    <constraint firstItem="h62-hq-FaX" firstAttribute="leading" secondItem="aNY-q7-HVX" secondAttribute="leading" id="ykE-E3-rFM"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-3J-0UV" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                <rect key="frame" x="10" y="70" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dZi-PL-Baw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Invoice Number"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Invoice Number"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KyF-kh-r88" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                <rect key="frame" x="10" y="130" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Y8K-5h-yyY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Total Amount"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Total Amount"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTn-dI-2WJ" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                <rect key="frame" x="10" y="190" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6NA-wF-STf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Description"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Description"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-ON-QYo">
+                                <rect key="frame" x="10" y="310" width="355" height="130"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Htl-Gr-MQR">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93Q-rd-HWT" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="1tW-35-Iac"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Account Number"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Account Number"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kl-VM-IVJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="selectBankAccountNumberButtonClicked:" destination="4JC-cO-U3x" eventType="touchUpInside" id="WtY-Jb-Ycx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Avh-Wn-Xi6"/>
+                                            <constraint firstItem="93Q-rd-HWT" firstAttribute="top" secondItem="Htl-Gr-MQR" secondAttribute="top" id="OFD-UP-vsR"/>
+                                            <constraint firstAttribute="trailing" secondItem="93Q-rd-HWT" secondAttribute="trailing" id="OOJ-UT-VQg"/>
+                                            <constraint firstItem="3Kl-VM-IVJ" firstAttribute="leading" secondItem="Htl-Gr-MQR" secondAttribute="leading" id="Rjs-2a-Ufx"/>
+                                            <constraint firstItem="93Q-rd-HWT" firstAttribute="leading" secondItem="Htl-Gr-MQR" secondAttribute="leading" id="Yj6-gs-4I5"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Kl-VM-IVJ" secondAttribute="trailing" id="nMW-kt-mAd"/>
+                                            <constraint firstAttribute="bottom" secondItem="93Q-rd-HWT" secondAttribute="bottom" id="r1O-D8-kdj"/>
+                                            <constraint firstAttribute="bottom" secondItem="3Kl-VM-IVJ" secondAttribute="bottom" id="roB-2F-LE6"/>
+                                            <constraint firstItem="3Kl-VM-IVJ" firstAttribute="top" secondItem="Htl-Gr-MQR" secondAttribute="top" id="zwa-kP-rz4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-Gh-ejY">
+                                        <rect key="frame" x="0.0" y="60" width="355" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CK4-Vk-hTA" customClass="TKTransitionSubmitButton" customModule="CellPaySDK" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="10" width="295" height="50"/>
+                                                <color key="backgroundColor" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="NEXT">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextButtonClicked:" destination="4JC-cO-U3x" eventType="touchUpInside" id="eVj-mZ-OiE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="6dO-i6-gVt"/>
+                                            <constraint firstAttribute="bottom" secondItem="CK4-Vk-hTA" secondAttribute="bottom" constant="10" id="OFz-NA-4ww"/>
+                                            <constraint firstItem="CK4-Vk-hTA" firstAttribute="top" secondItem="cCw-Gh-ejY" secondAttribute="top" constant="10" id="b4X-5z-FJg"/>
+                                            <constraint firstAttribute="trailing" secondItem="CK4-Vk-hTA" secondAttribute="trailing" constant="30" id="kdW-lt-F3G"/>
+                                            <constraint firstItem="CK4-Vk-hTA" firstAttribute="leading" secondItem="cCw-Gh-ejY" secondAttribute="leading" constant="30" id="p8N-qE-atR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8j-3C-0Ba">
+                                <rect key="frame" x="10" y="250" width="355" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKd-gC-XFd" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="CellPaySDK" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="tU4-tJ-SVM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Select Bank To Debit"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Select Bank To Debit"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="down-arrow"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GK0-q3-0md">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="selctBankButtonClicked:" destination="4JC-cO-U3x" eventType="touchUpInside" id="6Ep-dD-7ZX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iKd-gC-XFd" secondAttribute="trailing" id="EPM-U7-mKZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="GK0-q3-0md" secondAttribute="bottom" id="FuZ-PQ-gQw"/>
+                                    <constraint firstItem="GK0-q3-0md" firstAttribute="top" secondItem="Y8j-3C-0Ba" secondAttribute="top" id="KYn-wc-AQr"/>
+                                    <constraint firstItem="GK0-q3-0md" firstAttribute="leading" secondItem="Y8j-3C-0Ba" secondAttribute="leading" id="LWb-wP-X64"/>
+                                    <constraint firstAttribute="bottom" secondItem="iKd-gC-XFd" secondAttribute="bottom" id="RsL-Vg-s7g"/>
+                                    <constraint firstAttribute="height" constant="50" id="e4o-aP-Bic"/>
+                                    <constraint firstItem="iKd-gC-XFd" firstAttribute="leading" secondItem="Y8j-3C-0Ba" secondAttribute="leading" id="jZu-gg-5A3"/>
+                                    <constraint firstAttribute="trailing" secondItem="GK0-q3-0md" secondAttribute="trailing" id="nXE-0n-kYZ"/>
+                                    <constraint firstItem="iKd-gC-XFd" firstAttribute="top" secondItem="Y8j-3C-0Ba" secondAttribute="top" id="t2s-za-ggM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jTn-dI-2WJ" firstAttribute="top" secondItem="KyF-kh-r88" secondAttribute="bottom" constant="10" id="BO0-6G-fr4"/>
+                            <constraint firstItem="SgZ-3J-0UV" firstAttribute="leading" secondItem="uRo-Vx-PY5" secondAttribute="leading" constant="10" id="ECV-Bg-eh0"/>
+                            <constraint firstItem="jTn-dI-2WJ" firstAttribute="leading" secondItem="uRo-Vx-PY5" secondAttribute="leading" constant="10" id="Gy5-ah-stx"/>
+                            <constraint firstItem="uRo-Vx-PY5" firstAttribute="trailing" secondItem="jTn-dI-2WJ" secondAttribute="trailing" constant="10" id="Ipf-fm-psg"/>
+                            <constraint firstItem="Y8j-3C-0Ba" firstAttribute="top" secondItem="jTn-dI-2WJ" secondAttribute="bottom" constant="10" id="UqW-S5-jnm"/>
+                            <constraint firstItem="KyF-kh-r88" firstAttribute="leading" secondItem="uRo-Vx-PY5" secondAttribute="leading" constant="10" id="WeZ-D1-PcN"/>
+                            <constraint firstItem="Y8j-3C-0Ba" firstAttribute="leading" secondItem="uRo-Vx-PY5" secondAttribute="leading" constant="10" id="Xrn-b5-edO"/>
+                            <constraint firstItem="aNY-q7-HVX" firstAttribute="top" secondItem="uRo-Vx-PY5" secondAttribute="top" id="Xxf-hq-B7Y"/>
+                            <constraint firstItem="uRo-Vx-PY5" firstAttribute="trailing" secondItem="SgZ-3J-0UV" secondAttribute="trailing" constant="10" id="a43-cA-8zo"/>
+                            <constraint firstItem="6NQ-ON-QYo" firstAttribute="top" secondItem="Y8j-3C-0Ba" secondAttribute="bottom" constant="10" id="aUm-zV-8pS"/>
+                            <constraint firstItem="uRo-Vx-PY5" firstAttribute="trailing" secondItem="KyF-kh-r88" secondAttribute="trailing" constant="10" id="dIN-Fs-sGc"/>
+                            <constraint firstItem="uRo-Vx-PY5" firstAttribute="trailing" secondItem="aNY-q7-HVX" secondAttribute="trailing" id="jix-cF-mLd"/>
+                            <constraint firstItem="SgZ-3J-0UV" firstAttribute="top" secondItem="aNY-q7-HVX" secondAttribute="bottom" constant="20" id="lOb-DA-h4z"/>
+                            <constraint firstItem="uRo-Vx-PY5" firstAttribute="trailing" secondItem="Y8j-3C-0Ba" secondAttribute="trailing" constant="10" id="llw-wc-sEM"/>
+                            <constraint firstItem="aNY-q7-HVX" firstAttribute="leading" secondItem="uRo-Vx-PY5" secondAttribute="leading" id="q1f-6s-f5u"/>
+                            <constraint firstItem="KyF-kh-r88" firstAttribute="top" secondItem="SgZ-3J-0UV" secondAttribute="bottom" constant="10" id="qmX-1t-ZbI"/>
+                            <constraint firstItem="6NQ-ON-QYo" firstAttribute="leading" secondItem="uRo-Vx-PY5" secondAttribute="leading" constant="10" id="vkB-wK-Ejp"/>
+                            <constraint firstItem="uRo-Vx-PY5" firstAttribute="trailing" secondItem="6NQ-ON-QYo" secondAttribute="trailing" constant="10" id="xuu-1M-49Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uRo-Vx-PY5"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountNumberTF" destination="93Q-rd-HWT" id="NJQ-ZK-3fR"/>
+                        <outlet property="accountNumberView" destination="Htl-Gr-MQR" id="7MV-wH-IvA"/>
+                        <outlet property="backButton" destination="aif-Gw-jWv" id="iSF-Bf-LYD"/>
+                        <outlet property="descriptionTF" destination="jTn-dI-2WJ" id="UvA-ki-tSi"/>
+                        <outlet property="invoiceNumberTF" destination="SgZ-3J-0UV" id="foA-nK-fgr"/>
+                        <outlet property="nextButton" destination="CK4-Vk-hTA" id="hwC-o0-5m3"/>
+                        <outlet property="nextButtonView" destination="cCw-Gh-ejY" id="8Te-RF-5UJ"/>
+                        <outlet property="selectBankToDebitTf" destination="iKd-gC-XFd" id="kzl-iD-pdP"/>
+                        <outlet property="totalAmountTF" destination="KyF-kh-r88" id="g7Z-bB-JvV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBY-cg-FGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="588" y="25.637181409295355"/>
+        </scene>
+        <!--Confirm PaymentVC-->
+        <scene sceneID="3O0-SP-tQ2">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmPaymentVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YUn-o9-gLc" customClass="ConfirmPaymentVC" customModule="CellPaySDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wro-nz-YLx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5l-Ho-PTb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-EP-Yjh">
+                                <rect key="frame" x="10" y="40" width="355" height="430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3MK-37-SZB">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJe-u8-GYa">
+                                                <rect key="frame" x="325" y="12.5" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="31X-H5-D0g"/>
+                                                    <constraint firstAttribute="width" constant="15" id="ZIJ-ph-dck"/>
+                                                </constraints>
+                                                <state key="normal" image="ic_close"/>
+                                                <connections>
+                                                    <action selector="closeButtonClicked:" destination="YUn-o9-gLc" eventType="touchUpInside" id="QUO-wy-kDa"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Transfer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-ei-Zai">
+                                                <rect key="frame" x="30" y="9.5" width="295" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="textColor" red="0.91372549020000005" green="0.70980392160000005" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6EH-ae-kWI"/>
+                                            <constraint firstItem="NJe-u8-GYa" firstAttribute="centerY" secondItem="3MK-37-SZB" secondAttribute="centerY" id="7FR-1Y-a10"/>
+                                            <constraint firstItem="NJe-u8-GYa" firstAttribute="leading" secondItem="jFe-ei-Zai" secondAttribute="trailing" id="CpV-hb-oGh"/>
+                                            <constraint firstItem="jFe-ei-Zai" firstAttribute="centerY" secondItem="3MK-37-SZB" secondAttribute="centerY" id="FKW-4q-841"/>
+                                            <constraint firstAttribute="trailing" secondItem="NJe-u8-GYa" secondAttribute="trailing" constant="15" id="RII-EA-YTq"/>
+                                            <constraint firstItem="jFe-ei-Zai" firstAttribute="centerX" secondItem="3MK-37-SZB" secondAttribute="centerX" id="aU6-mJ-7Wz"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your PIN to confirm the transaction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ8-nW-6FH">
+                                        <rect key="frame" x="20" y="50" width="315" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="KXj-Wy-VBi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applied Fee:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IX-hh-cb8">
+                                        <rect key="frame" x="20" y="105" width="80" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="8G3-5y-YZ8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 NPR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onB-qz-1kB">
+                                        <rect key="frame" x="105" y="105" width="230" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1q-iW-51q">
+                                        <rect key="frame" x="10" y="132" width="335" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrv-ye-RYk" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9Df-Yr-TU4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Amount"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Amount"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rrv-ye-RYk" secondAttribute="trailing" id="6xf-F1-Diq"/>
+                                            <constraint firstItem="rrv-ye-RYk" firstAttribute="top" secondItem="K1q-iW-51q" secondAttribute="top" id="L6u-LL-tUO"/>
+                                            <constraint firstItem="rrv-ye-RYk" firstAttribute="leading" secondItem="K1q-iW-51q" secondAttribute="leading" id="hfI-Eg-6ze"/>
+                                            <constraint firstAttribute="height" constant="50" id="hw1-Ff-uHm"/>
+                                            <constraint firstAttribute="bottom" secondItem="rrv-ye-RYk" secondAttribute="bottom" id="i0t-bs-uIi"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P41-kp-h6p">
+                                        <rect key="frame" x="10" y="192" width="335" height="190"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydd-uB-Yfa">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFx-ea-yb6" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="s1w-aO-CUs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Pin"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Enter Pin"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="vFx-ea-yb6" secondAttribute="trailing" id="Ub3-yy-maw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vFx-ea-yb6" secondAttribute="bottom" id="bSK-bi-MFU"/>
+                                                    <constraint firstItem="vFx-ea-yb6" firstAttribute="leading" secondItem="Ydd-uB-Yfa" secondAttribute="leading" id="gEm-nZ-BAR"/>
+                                                    <constraint firstItem="vFx-ea-yb6" firstAttribute="top" secondItem="Ydd-uB-Yfa" secondAttribute="top" id="gd3-B9-sOR"/>
+                                                    <constraint firstAttribute="height" constant="50" id="pAl-Dm-SbI"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5p-ML-L1u">
+                                                <rect key="frame" x="0.0" y="60" width="335" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iVe-tM-zuz" customClass="SkyFloatingLabelTextField" customModule="CellPaySDK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="zd0-AD-NZ0"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                <color key="value" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter OTP"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Enter OTP"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="iVe-tM-zuz" firstAttribute="leading" secondItem="K5p-ML-L1u" secondAttribute="leading" id="83g-CD-Rhd"/>
+                                                    <constraint firstAttribute="height" constant="50" id="9A3-hl-Q3G"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iVe-tM-zuz" secondAttribute="bottom" id="BV8-SU-K4o"/>
+                                                    <constraint firstItem="iVe-tM-zuz" firstAttribute="top" secondItem="K5p-ML-L1u" secondAttribute="top" id="Uck-oy-MgX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iVe-tM-zuz" secondAttribute="trailing" id="c4s-1D-y8a"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XH2-vG-Hhu">
+                                                <rect key="frame" x="0.0" y="120" width="335" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-1b-3vX" customClass="TKTransitionSubmitButton" customModule="CellPaySDK" customModuleProvider="target">
+                                                        <rect key="frame" x="30" y="10" width="275" height="50"/>
+                                                        <color key="backgroundColor" red="0.098039215690000001" green="0.22352941179999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="CONFIRM">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="confirmPaymentButtonClicked:" destination="YUn-o9-gLc" eventType="touchUpInside" id="9GO-5e-aY7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="vVL-1b-3vX" firstAttribute="top" secondItem="XH2-vG-Hhu" secondAttribute="top" constant="10" id="1bM-eq-GWu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vVL-1b-3vX" secondAttribute="trailing" constant="30" id="MQx-1o-wh8"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vVL-1b-3vX" secondAttribute="bottom" constant="10" id="Zxy-aH-M8V"/>
+                                                    <constraint firstAttribute="height" constant="70" id="czZ-GZ-e84"/>
+                                                    <constraint firstItem="vVL-1b-3vX" firstAttribute="leading" secondItem="XH2-vG-Hhu" secondAttribute="leading" constant="30" id="wiK-fc-V4i"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="P41-kp-h6p" firstAttribute="top" secondItem="K1q-iW-51q" secondAttribute="bottom" constant="10" id="0dO-MU-JmG"/>
+                                    <constraint firstItem="onB-qz-1kB" firstAttribute="trailing" secondItem="EJ8-nW-6FH" secondAttribute="trailing" id="8Z9-MZ-Lmo"/>
+                                    <constraint firstItem="3MK-37-SZB" firstAttribute="top" secondItem="qHv-EP-Yjh" secondAttribute="top" id="BBz-md-2oX"/>
+                                    <constraint firstItem="EJ8-nW-6FH" firstAttribute="top" secondItem="3MK-37-SZB" secondAttribute="bottom" constant="10" id="BI9-oq-PtJ"/>
+                                    <constraint firstAttribute="height" constant="430" id="FxV-XT-kL1"/>
+                                    <constraint firstItem="K1q-iW-51q" firstAttribute="leading" secondItem="qHv-EP-Yjh" secondAttribute="leading" constant="10" id="K6z-ZF-21l"/>
+                                    <constraint firstItem="5IX-hh-cb8" firstAttribute="top" secondItem="EJ8-nW-6FH" secondAttribute="bottom" constant="10" id="MO8-8d-UPz"/>
+                                    <constraint firstItem="K1q-iW-51q" firstAttribute="top" secondItem="5IX-hh-cb8" secondAttribute="bottom" constant="10" id="SNe-BT-Xw0"/>
+                                    <constraint firstItem="onB-qz-1kB" firstAttribute="leading" secondItem="5IX-hh-cb8" secondAttribute="trailing" constant="5" id="Spd-2c-hAz"/>
+                                    <constraint firstItem="P41-kp-h6p" firstAttribute="leading" secondItem="qHv-EP-Yjh" secondAttribute="leading" constant="10" id="Wow-m0-vgI"/>
+                                    <constraint firstItem="EJ8-nW-6FH" firstAttribute="leading" secondItem="qHv-EP-Yjh" secondAttribute="leading" constant="20" id="XbC-4W-GB2"/>
+                                    <constraint firstAttribute="trailing" secondItem="P41-kp-h6p" secondAttribute="trailing" constant="10" id="daT-ya-y9E"/>
+                                    <constraint firstAttribute="trailing" secondItem="K1q-iW-51q" secondAttribute="trailing" constant="10" id="jy1-NX-tpT"/>
+                                    <constraint firstItem="3MK-37-SZB" firstAttribute="leading" secondItem="qHv-EP-Yjh" secondAttribute="leading" id="lPg-b5-ouB"/>
+                                    <constraint firstItem="onB-qz-1kB" firstAttribute="centerY" secondItem="5IX-hh-cb8" secondAttribute="centerY" id="nJ5-Dc-Yhc"/>
+                                    <constraint firstItem="5IX-hh-cb8" firstAttribute="leading" secondItem="EJ8-nW-6FH" secondAttribute="leading" id="t4i-wL-p1R"/>
+                                    <constraint firstAttribute="trailing" secondItem="EJ8-nW-6FH" secondAttribute="trailing" constant="20" id="uii-SB-HP5"/>
+                                    <constraint firstAttribute="trailing" secondItem="3MK-37-SZB" secondAttribute="trailing" id="x1x-ow-SKg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M3A-en-usP" firstAttribute="trailing" secondItem="P5l-Ho-PTb" secondAttribute="trailing" id="3i5-JC-Iho"/>
+                            <constraint firstItem="qHv-EP-Yjh" firstAttribute="leading" secondItem="M3A-en-usP" secondAttribute="leading" constant="10" id="9ba-b5-FoY"/>
+                            <constraint firstItem="qHv-EP-Yjh" firstAttribute="top" secondItem="M3A-en-usP" secondAttribute="top" constant="40" id="DuT-QZ-Iy2"/>
+                            <constraint firstItem="M3A-en-usP" firstAttribute="trailing" secondItem="qHv-EP-Yjh" secondAttribute="trailing" constant="10" id="QnO-ag-bum"/>
+                            <constraint firstItem="P5l-Ho-PTb" firstAttribute="top" secondItem="M3A-en-usP" secondAttribute="top" id="fhK-56-0zO"/>
+                            <constraint firstItem="P5l-Ho-PTb" firstAttribute="leading" secondItem="M3A-en-usP" secondAttribute="leading" id="r3M-rO-CEH"/>
+                            <constraint firstItem="M3A-en-usP" firstAttribute="bottom" secondItem="P5l-Ho-PTb" secondAttribute="bottom" id="web-cN-xEg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M3A-en-usP"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountTF" destination="rrv-ye-RYk" id="9lG-Yx-9Ku"/>
+                        <outlet property="amountTFView" destination="K1q-iW-51q" id="DgG-ej-2Ir"/>
+                        <outlet property="appliedFeeLabel" destination="onB-qz-1kB" id="h4U-kU-5em"/>
+                        <outlet property="closeButtonClicked" destination="NJe-u8-GYa" id="HuM-F1-UDn"/>
+                        <outlet property="confirmButton" destination="vVL-1b-3vX" id="pyR-Vr-cR1"/>
+                        <outlet property="confirmButtonView" destination="XH2-vG-Hhu" id="JHl-Mf-iz0"/>
+                        <outlet property="enterOtpView" destination="K5p-ML-L1u" id="tgd-Ux-zNg"/>
+                        <outlet property="enterPinTF" destination="vFx-ea-yb6" id="JSc-5l-vRQ"/>
+                        <outlet property="enterPinView" destination="Ydd-uB-Yfa" id="xo8-zV-SE4"/>
+                        <outlet property="otpTF" destination="iVe-tM-zuz" id="Ft7-0g-q0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nY-SS-IMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.8" y="25.637181409295355"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="down-arrow" width="128" height="128"/>
+        <image name="ic_cellpay_logo" width="182" height="82"/>
+        <image name="ic_close" width="64" height="64"/>
+        <image name="ic_left_arrow" width="128" height="128"/>
+        <image name="ic_login_bg" width="375" height="221"/>
+        <image name="ic_lowe_bg" width="375" height="93"/>
+        <image name="ic_transparent_bg" width="345" height="186"/>
+    </resources>
+</document>
