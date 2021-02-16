@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1894442725DB945800B4BB6F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1894442625DB945800B4BB6F /* README.md */; };
 		5D5BFB1A25D676590042B5D7 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BFB1925D676590042B5D7 /* images.xcassets */; };
 		5D5BFB6625D6797B0042B5D7 /* SkyFloatingLabelTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BFB6525D6797B0042B5D7 /* SkyFloatingLabelTextfield.swift */; };
 		5D5BFB6825D682F40042B5D7 /* APICalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BFB6725D682F40042B5D7 /* APICalling.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1894442625DB945800B4BB6F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../Desktop/README.md; sourceTree = "<group>"; };
 		5D5BFB1925D676590042B5D7 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		5D5BFB6525D6797B0042B5D7 /* SkyFloatingLabelTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextfield.swift; sourceTree = "<group>"; };
 		5D5BFB6725D682F40042B5D7 /* APICalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalling.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		5DAD007D25D586320072B06A = {
 			isa = PBXGroup;
 			children = (
+				1894442625DB945800B4BB6F /* README.md */,
 				5DAD008925D586320072B06A /* CellPaySDK */,
 				5DAD009425D586320072B06A /* CellPaySDKTests */,
 				5DAD008825D586320072B06A /* Products */,
@@ -335,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1894442725DB945800B4BB6F /* README.md in Resources */,
 				5DAD00A625D588660072B06A /* Main.storyboard in Resources */,
 				5D5BFB1A25D676590042B5D7 /* images.xcassets in Resources */,
 			);
