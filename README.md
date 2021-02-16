@@ -15,9 +15,11 @@
 
 - In @IBAction of Pay with CellPay Button call CellPay SDK LoginVC as
 
-```ruby
+
 ### Example Code from View Contorller
-#### DispatchQueue.main.async {
+```ruby
+
+DispatchQueue.main.async {
             CellPaySDKInitialize.presentFirstViewControllerOn(caller: self, requiredArgument: CellPayPaymentArguments(mobileNumber: "9801977861", merchantName: "Online Shop", paymentType: 1, price: 10, invoiceID: "1234152256"), delegate: self, islive: false)
         }
 ```
