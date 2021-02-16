@@ -1,5 +1,5 @@
 ## CellPay-SDK
-![](https://cellpay.com.np/themes/ele/assets/img/CellPay.svg | width=150)
+![CellPay](https://cellpay.com.np/themes/ele/assets/img/CellPay.svg) {:width="150px"}
 
 # Steps to add CellPay SdK and usage
 
