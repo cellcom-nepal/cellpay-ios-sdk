@@ -1,9 +1,9 @@
 ## CellPay-SDK
-![CellPay](https://cellpay.com.np/themes/ele/assets/img/CellPay.svg){:width="150px"}
+![CellPay](https://cellpay.com.np/themes/ele/assets/img/CellPay.svg)
 
 # Steps to add CellPay SdK and usage
 
-- Add pod 'MyFramework',:git => 'https://github.com/cellcom-nepal/cellpay-ios-sdk' to your pod file and install pod file.
+- Add pod 'CellPaySDK',:git => 'https://github.com/cellcom-nepal/cellpay-ios-sdk' to your pod file and install pod file.
 
 - Add Pay with CellPay Button with hex value (#193983), rgb(red:25,green:57,blue:131,alpha:1) to viewcontroller.
 
